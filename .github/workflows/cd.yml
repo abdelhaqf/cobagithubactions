@@ -20,4 +20,9 @@ jobs:
           key: ${{ secrets.SSH_PASSWORD }}
           port: 64000
           script: |
-            mkdir 'abdel999'
+            cd cobagithubactions.lignosoftware.com
+            rm -r css/ img/ js/
+            rm favicon.ico index.html
+            git clone https://github.com/abdelhaqf/cobagithubactions
+            cd cobagithubactions
+            npm install
